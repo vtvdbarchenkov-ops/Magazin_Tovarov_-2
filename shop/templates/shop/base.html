@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {%load static%}
+  <link rel="stylesheet" href="{%static 'shop/css/styles.css'%}">
+  <meta charset="UTF-8">
+  <title>Магазин бытовых товаров</title>
+</head>
+<body>
+  {% include 'shop/includes/header.html' %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>  
+  {% include 'shop/includes/footer.html' %}
+  <script src="{% static 'shop/js/script.js' %}"></script>
+</body>
+</html>
