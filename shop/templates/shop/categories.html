@@ -1,0 +1,19 @@
+{% extends "shop/base.html" %}
+{% block content %}
+<h1>Категории</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit">Добавить</button>
+</form>
+
+<h2> Все категории</h2>
+<ul>
+    {% for item in items %}
+    <li>{{ item }}</li>
+    {% empty %}
+    <li> Пока нет записей</li>
+    {% endfor %}
+</ul>
+{% endblock %}
